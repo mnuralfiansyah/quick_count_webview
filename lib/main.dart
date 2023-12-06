@@ -45,12 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Stack(
+      appBar: null,
+      body: SafeArea(
+        child: Stack(
         children: [
+          // SizedBox(height: ,),
           InAppWebView(
             initialUrlRequest: URLRequest(
                 url: Uri.parse("https://dprri.quickcount.samatech.web.id/")),
@@ -89,6 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               : SizedBox()
         ],
+      ),
       ),
     );
   }
