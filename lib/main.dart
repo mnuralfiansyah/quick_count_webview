@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -45,14 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null,
       body: SafeArea(
         child: Stack(
         children: [
           // SizedBox(height: ,),
           InAppWebView(
             initialUrlRequest: URLRequest(
-                url: Uri.parse("https://dprri.quickcount.samatech.web.id/")),
+                url: Uri.parse("https://absensi.sman78-jkt.sch.id/")),
             onWebViewCreated: (InAppWebViewController controller) {
               inAppWebViewController = controller;
             },
